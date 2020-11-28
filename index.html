@@ -1,78 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lazy Loading...</title>
+
   <style>
-    .feed {
-      list-style: none;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .title{
-      font-family: Arial, Helvetica, sans-serif;
+
+    h1 {
+      color: #313131;
+      font-size: 60px;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
     }
-    p{
-      width: 640px;
-    }
-    .feed__item:last-child{
-      margin-bottom: 50px;
+    .lazy {
+      display: block;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto 100px;
     }
   </style>
 </head>
-
 <body>
-  <h1 class="title">Lazy loading images (using Intersection Observer API)</h1>
-
-  <ul class="feed">
-    <li class="feed__item">
-      <img src="./images/salmon-518032_640.jpg" alt="salmon" width="640">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo autem eum, aut cum sequi sapiente tempora
-        aspernatur id harum recusandae perferendis maxime esse, nam voluptate corporis eos veritatis odio laboriosam.
-        Dolorum quis commodi debitis modi delectus voluptates eum, esse excepturi rerum impedit, placeat quos
-        voluptatem? Numquam animi omnis illo aperiam, reprehenderit commodi nihil, facilis dolor repudiandae natus quo
-        doloribus distinctio?
-      </p>
-    </li>
-    <li class="feed__item">
-      <img src="./images/soup-5690827_640.jpg" alt="soup" width="640">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, iste corrupti? Delectus eius quas asperiores
-        deserunt. Architecto amet, quisquam porro voluptatibus, praesentium accusamus accusantium veniam magnam odit,
-        neque culpa ullam!
-        Velit, eaque repellendus ut magni sed quas animi officia maiores, impedit dolores beatae, dolore voluptate
-        consequuntur sequi! Tenetur libero soluta enim eveniet architecto, unde minima illum molestiae eius maxime
-        accusamus!
-      </p>
-    </li>
-    <li class="feed__item">
-      <img src="./images/close-up-1854245_640.jpg" alt="pasta" width="640">
-      <p>Doloremque autem neque voluptatibus tenetur necessitatibus, asperiores quibusdam perferendis quos consequatur.
-        Cupiditate totam hic accusamus quisquam praesentium iste qui reprehenderit odio, temporibus voluptatem dicta
-        minima suscipit sunt? Quibusdam, delectus magnam.
-        Atque odit optio quidem! Ipsum ab consectetur numquam omnis ut, odit dicta eius, architecto delectus nulla qui
-        nesciunt aperiam voluptatibus facilis, commodi cumque est labore deleniti libero! Quae, fuga expedita.
-      </p>
-    </li>
-    <li class="feed__item">
-      <img src="./images/pancake-1984712_640.jpg" alt="pancake" width="640">
-      <p> Qui, repellendus minima? Ipsa omnis enim adipisci debitis, a id eius earum dignissimos tenetur quod
-        praesentium
-        repellendus cum odio obcaecati temporibus molestiae aspernatur vel iusto alias, ducimus suscipit provident
-        pariatur.
-      </p>
-    </li>
-    <li class="feed__item">
-      <img src="./images/the-cake-427920_640.jpg" alt="cake" width="640">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla animi repellendus, voluptatem minima
-        dolorem facere impedit laudantium hic quae excepturi magnam, a nam? Nesciunt quis exercitationem nostrum velit
-        pariatur?
-        Obcaecati ex eius harum sed tempora aliquam repellat quasi? Animi tempore, iusto quam nam, iste debitis
-        laudantium mollitia officiis ratione omnis inventore temporibus alias necessitatibus repellat at adipisci itaque
-        libero?
-      </p>
-    </li>
-  </ul>
-  <script src="./script.js"></script>
+  <h1>Lazy Loading images...</h1>
+  <img src="./images/lazy_img.jpg" data-src="./images/img_1.jpg" class="lazy" />
+  <img src="./images/lazy_img.jpg" data-src="./images/img_2.jpg" class="lazy" />
+  <script src="main.js"></script>
 </body>
-
 </html>
