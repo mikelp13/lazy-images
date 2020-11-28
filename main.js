@@ -5,7 +5,7 @@ const options = {
 
 const images = document.querySelectorAll('img.lazy');
 
-const observer = new IntersectionObserver(imageObserver, options);
+const io = new IntersectionObserver(imageObserver, options);
 
 function imageObserver(entries, observer) {
   entries.forEach(entry => {
@@ -13,8 +13,8 @@ function imageObserver(entries, observer) {
       const img = entry.target;
       const img_src = img.dataset.src;
       console.log("Lazy loading ", img);
-      img.src = img_src;
-      observer.unobserve(img);
+       img.src = img_src;
+       observer.unobserve(img);
     }
   })
 }
@@ -22,5 +22,5 @@ function imageObserver(entries, observer) {
 
 
 images.forEach(img => {
-  observer.observe(img);
+  io.observe(img);
 })
